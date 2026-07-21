@@ -50,17 +50,31 @@ main {
   box-shadow: none;
   border-color: transparent !important;
   z-index: 10;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 .navbar .nav-link,
 .navbar-brand,
 .navbar-title {
   color: white !important;
+  transition: color 0.3s ease;
 }
 
-.navbar .nav-link:hover {
-  opacity: 0.75;
-  transition: opacity 0.2s ease;
+/* Estado al hacer scroll */
+.navbar.scrolled {
+  position: fixed;
+  background-color: #c0562e !important; /* naranja oscuro, ajusta al tono real de tu imagen */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  padding-top: 0.15rem;
+  padding-bottom: 0.15rem;
+}
+
+.navbar.scrolled .nav-link,
+.navbar.scrolled .navbar-brand,
+.navbar.scrolled .navbar-title {
+  color: #white !important;
 }
 
 .hero-content h2.anchored,
