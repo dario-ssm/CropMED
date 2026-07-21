@@ -26,10 +26,20 @@ cat(sprintf('[%s]\n', paste(sprintf('"%s"', crops), collapse = ",")))
 cat('</script>\n')
 ```
 
-::: {.map-display}
-<img src="" alt="Selected crop map" id="crop-map" style="display:none;"/>
-<p id="crop-placeholder">Select a crop to visualize its map.</p>
-<p id="crop-error" style="display:none; color:#b00;">No map was found for that crop.</p>
+::: map-display
+<img alt="Selected crop map" id="crop-map" style="display:none;"/>
+
+<p id="crop-placeholder">
+
+Select a crop to visualize its map.
+
+</p>
+
+<p id="crop-error" style="display:none; color:#b00;">
+
+No map was found for that crop.
+
+</p>
 :::
 
 ```{=html}
@@ -141,7 +151,7 @@ function buscarCultivo() {
     placeholder.style.display = 'none';
     errorMsg.style.display = 'none';
     img.style.display = 'block';
-    img.src = `images/${crop}.jpg`;
+    img.src = `images/${crop}.png`;
     img.alt = `Crop map: ${crop}`;
   } else {
     img.style.display = 'none';
