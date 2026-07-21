@@ -1,0 +1,27 @@
+---
+title: "About"
+format: 
+  html:
+    code-fold: false
+    code-tools: false
+editor: visual
+---
+
+## Contact
+
+If you have any question about the data, please send an email to [dario.san\@uah.es](mailto: dario.san@uah.es) or open an Issue in the [GitHub repository](https://github.com/dario-ssm/CropMED).
+
+## Update Plan
+
+The *CropMED* dataset is intended to be updated every two years by members of the Global Change Ecology and Evolution Research group (GLOCEE) from Universidad de Alcalá. This will be done by repeating the harmonization strategy to new data as they become available in their official websites.
+
+## Data sources
+
+The data descriptor article (now under submission in a scientific journal) properly cites all data sources used to compile *CropMED*.
+
+::: callout-note
+
+### Scientific Article describing the dataset:
+
+| **San-Segundo Molina, D., Villén-Pérez, S. & Morales-Castilla, I., 2026**. CropMED: A harmonized, fine-scale crop area dataset across administrations in Europe, the Mediterranean Basin and the Levant. *Journal Information To Be Completed After Publication*.
+:::

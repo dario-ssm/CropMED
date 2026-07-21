@@ -1,0 +1,43 @@
+---
+page-layout: full
+toc: false
+css: styles.css
+body-class: home-page
+---
+
+:::::: home-page
+:::: hero
+![](images/logo_uah_white.png){height=70px, .hero-logo}
+
+
+::: hero-content
+## CropMED: A harmonized, fine-scale crop area dataset across administrations in Europe, the Mediterranean, and the Levant
+:::
+::::
+
+#### What's *CropMED?*
+
+[CropMED]{.smallcaps} is an open dataset including areas of 191 crops (in hectares) that have been compiled and harmonized from official institutions of 48 countries in the region.
+
+#### Which formats are available?
+
+- **Main dataset**: [CropMED]{.smallcaps} is primarily available as a table in comma-separated values (*.csv)* format, including hectares of each crop corresponding to each administrative unit and aggregated into crop groups and subgroups (see Overview).
+
+- **GIS extension**: [CropMED]{.smallcaps} is also available in GeoPackage format (*.gpkg*, see [definition here](https://en.wikipedia.org/wiki/GeoPackage)) for intended usage in GIS programs.
+
+- **Pictures**: [CropMED]{.smallcaps} also provides multiple images showing the distribution of hectares for each crop included in the dataset. These maps can be easily visualized in the `visualizer.qmd` page.
+
+#### Scientific Article
+
+| Please give credit to the authors by referring to the data deposit at Zenodo as follows:   
+| 
+| **San Segundo Molina, D., Villén Pérez, S. & Morales Castilla, I. 2026**. A harmonized fine-scale crop area dataset across administrations in Europe, the Mediterranean and the Levant. *Zenodo* [https://doi.org/10.5281/zenodo.2071710](https://doi.org/10.5281/zenodo.20717102 "https://doi.org/10.5281/zenodo.20717102")
+
+#### Scientific Citation
+
+::: callout-note
+The dataset and the metadata are described from a scientific perspective in a manuscript currently under submission and review. This page will be updated to include the scientific citation as follows:
+
+| **San-Segundo Molina, D., Villén-Pérez, S. & Morales-Castilla, I., 2026**. CropMED: A harmonized, fine-scale crop area dataset across administrations in Europe, the Mediterranean Basin and the Levant. *Journal Information To Be Completed After Publication*.
+:::
+::::::

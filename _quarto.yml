@@ -1,0 +1,32 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "CROPMED"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - href: overview.qmd
+        text: Overview
+      - href: visualizer.qmd
+        text: Visualize data
+      - href: download.qmd
+        text: Download
+      - href: about.qmd
+        text: About
+    right:
+      - icon: github
+        href: https://github.com/dario-ssm
+      - text: '<img src="icons/zenodo-white.svg" width="112" height="16" alt="Zenodo" style="vertical-align: middle;">'
+        href: https://zenodo.org/records/20717102
+  page-navigation: true
+format:
+  html:
+    theme: sandstone
+    toc: true
+    include-after-body: footer.html
+
+editor: visual
+

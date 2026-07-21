@@ -1,0 +1,153 @@
+---
+title: "Visualizer"
+format: html
+css: visualizer.css
+resources:
+  - images/
+---
+
+```{r}
+#| echo: false
+#| results: asis
+
+crops <- read.csv("data/crop_list.csv", header = FALSE)$V1
+crops <- sort(trimws(as.character(crops)))
+
+cat('<div class="crop-selector">\n')
+cat('<label for="crop-input">Select a crop:</label>\n')
+cat('<div class="combobox">\n')
+cat('<input type="text" id="crop-input" placeholder="Write or click to see all options..." autocomplete="off">\n')
+cat('<ul id="crop-dropdown" class="crop-dropdown"></ul>\n')
+cat('</div>\n')
+cat('</div>\n')
+
+cat('<script id="crop-data" type="application/json">\n')
+cat(sprintf('[%s]\n', paste(sprintf('"%s"', crops), collapse = ",")))
+cat('</script>\n')
+```
+
+::: {.map-display}
+<img src="" alt="Selected crop map" id="crop-map" style="display:none;"/>
+<p id="crop-placeholder">Select a crop to visualize its map.</p>
+<p id="crop-error" style="display:none; color:#b00;">No map was found for that crop.</p>
+:::
+
+```{=html}
+<script>
+const allCrops = JSON.parse(document.getElementById('crop-data').textContent);
+
+const input = document.getElementById('crop-input');
+const dropdown = document.getElementById('crop-dropdown');
+const img = document.getElementById('crop-map');
+const placeholder = document.getElementById('crop-placeholder');
+const errorMsg = document.getElementById('crop-error');
+
+let highlightedIndex = -1;
+let currentOptions = [];
+
+function renderDropdown(options) {
+  currentOptions = options;
+  highlightedIndex = -1;
+  dropdown.innerHTML = '';
+  if (options.length === 0) {
+    dropdown.style.display = 'none';
+    return;
+  }
+  options.forEach((crop, i) => {
+    const li = document.createElement('li');
+    li.textContent = crop;
+    li.dataset.index = i;
+    li.addEventListener('click', () => {
+      input.value = crop;
+      closeDropdown();
+      buscarCultivo();
+    });
+    dropdown.appendChild(li);
+  });
+  dropdown.style.display = 'block';
+}
+
+function openFullList() {
+  renderDropdown(allCrops);
+}
+
+function filterList(text) {
+  const term = text.trim().toLowerCase();
+  if (term === '') {
+    openFullList();
+    return;
+  }
+  const filtered = allCrops.filter(c => c.toLowerCase().includes(term));
+  renderDropdown(filtered);
+}
+
+function closeDropdown() {
+  dropdown.style.display = 'none';
+  highlightedIndex = -1;
+}
+
+function updateHighlight() {
+  const items = dropdown.querySelectorAll('li');
+  items.forEach((li, i) => {
+    li.classList.toggle('highlighted', i === highlightedIndex);
+  });
+  if (highlightedIndex >= 0 && items[highlightedIndex]) {
+    items[highlightedIndex].scrollIntoView({ block: 'nearest' });
+  }
+}
+
+input.addEventListener('click', () => {
+  openFullList();
+});
+
+input.addEventListener('input', () => {
+  filterList(input.value);
+});
+
+input.addEventListener('keydown', (e) => {
+  const items = dropdown.querySelectorAll('li');
+  if (e.key === 'ArrowDown') {
+    e.preventDefault();
+    highlightedIndex = Math.min(highlightedIndex + 1, items.length - 1);
+    updateHighlight();
+  } else if (e.key === 'ArrowUp') {
+    e.preventDefault();
+    highlightedIndex = Math.max(highlightedIndex - 1, 0);
+    updateHighlight();
+  } else if (e.key === 'Enter') {
+    e.preventDefault();
+    if (highlightedIndex >= 0 && currentOptions[highlightedIndex]) {
+      input.value = currentOptions[highlightedIndex];
+      closeDropdown();
+    }
+    buscarCultivo();
+  } else if (e.key === 'Escape') {
+    closeDropdown();
+  }
+});
+
+document.addEventListener('click', (e) => {
+  if (!e.target.closest('.combobox')) {
+    closeDropdown();
+  }
+});
+
+
+function buscarCultivo() {
+  const crop = input.value.trim();
+  closeDropdown();
+
+  if (allCrops.includes(crop)) {
+    placeholder.style.display = 'none';
+    errorMsg.style.display = 'none';
+    img.style.display = 'block';
+    img.src = `images/${crop}.jpg`;
+    img.alt = `Crop map: ${crop}`;
+  } else {
+    img.style.display = 'none';
+    placeholder.style.display = 'none';
+    errorMsg.style.display = 'block';
+  }
+}
+</script>
+```

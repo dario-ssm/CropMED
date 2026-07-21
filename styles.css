@@ -1,0 +1,79 @@
+/* css styles */
+.hero {
+   position: relative;
+  height: 100vh;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  margin-right: calc(-50vw + 50%);
+  margin-top: -2.7vw; /* corrige hueco blanco que deja Quarto por headroom/padding interno */
+  background-image: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+                     url("images/background_orange.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+
+.hero-content {
+  color: white;
+  max-width: 700px;
+  padding: 2rem;
+}
+
+body.home-page #quarto-header {
+  position: absolute !important;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: transparent !important;
+  z-index: 10;
+}
+
+body,
+.page-columns,
+main {
+  padding-top: 0 !important;
+  margin-top: 0 !important;
+}
+
+
+.navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: transparent !important;
+  background: transparent !important;
+  box-shadow: none;
+  border-color: transparent !important;
+  z-index: 10;
+}
+
+.navbar .nav-link,
+.navbar-brand,
+.navbar-title {
+  color: white !important;
+}
+
+.navbar .nav-link:hover {
+  opacity: 0.75;
+  transition: opacity 0.2s ease;
+}
+
+.hero-content h2.anchored,
+.hero-content h2 {
+  border-bottom: none !important;
+  padding-bottom: 0 !important;
+}
+
+.hero-logo {
+  position: absolute;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  height: 60px;
+  width: auto;
+  z-index: 5;
+}
