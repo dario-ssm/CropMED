@@ -165,7 +165,8 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#crop-hectares-distribution" id="toc-crop-hectares-distribution" class="nav-link active" data-scroll-target="#crop-hectares-distribution">Crop hectares distribution</a></li>
+  <li><a href="#crop-species-richness-distribution" id="toc-crop-species-richness-distribution" class="nav-link active" data-scroll-target="#crop-species-richness-distribution">Crop species richness distribution</a></li>
+  <li><a href="#crop-hectares-distribution" id="toc-crop-hectares-distribution" class="nav-link" data-scroll-target="#crop-hectares-distribution">Crop hectares distribution</a></li>
   <li><a href="#data-validation" id="toc-data-validation" class="nav-link" data-scroll-target="#data-validation">Data validation</a></li>
   <li><a href="#data-quality-indicators" id="toc-data-quality-indicators" class="nav-link" data-scroll-target="#data-quality-indicators">Data Quality Indicators</a></li>
   </ul>
@@ -219,17 +220,25 @@ window.Quarto = {
 <p>Correlation with FAO data on crop hectares for 47 countries included in CropMED</p>
 </section>
 </div>
+<section id="crop-species-richness-distribution" class="level1 section-block">
+<h1>Crop species richness distribution</h1>
+<p>The following map shows the number of crops with at least one hectare reported at each administrative unit.</p>
+<p><img src="images/.png" class="img-fluid"></p>
+</section>
 <section id="crop-hectares-distribution" class="level1 section-block">
 <h1>Crop hectares distribution</h1>
-<p>In the following graph, the rectangle area shows the proportion of area occupied by each crop relative to the total cropped hectares included in <em>CropMED</em>. <img src="images/perc_crops_ranking_tops.jpg" class="img-fluid"></p>
+<p>In the following graph, the rectangle area shows the proportion of area occupied by each crop relative to the total cropped hectares included in <em>CropMED</em>.</p>
+<p><img src="images/figure2.png" class="img-fluid"></p>
 </section>
 <section id="data-validation" class="level1 section-block">
 <h1>Data validation</h1>
-<p>Overall, we found high correlation (<span class="math inline">\(R^2 = 0.094,\ \textrm{NRMSE}=0.0015\)</span>) between data from CropMED administrative units aggregated at the country-level and those reported from FAOSTAT (<a href="https://www.fao.org/faostat/en/#data/QCL" class="uri">https://www.fao.org/faostat/en/#data/QCL</a>). Here we show the validation for some of the most relevant crops included in <em>CropMED,</em> where countries with higher divergences are pointed out. <img src="images/technical_validation_top16.png" class="img-fluid"></p>
+<p>Overall, we found high correlation (<span class="math inline">\(R^2 = 0.094,\ \textrm{NRMSE}=0.0015\)</span>) between data from CropMED administrative units aggregated at the country-level and those reported from FAOSTAT (<a href="https://www.fao.org/faostat/en/#data/QCL" class="uri">https://www.fao.org/faostat/en/#data/QCL</a>). Here we show the validation for some of the most relevant crops included in <em>CropMED,</em> where countries with higher divergences are pointed out.</p>
+<p><img src="images/technical_validation_top16.png" class="img-fluid"></p>
 </section>
 <section id="data-quality-indicators" class="level1 section-block">
 <h1>Data Quality Indicators</h1>
-<p>We assigned data quality scores to crop groups within each country across three dimensions: spatial (administrative level reached), temporal (updating periodicity of data) and taxonomic (number of unique crops reported for a crop group). The image below summarizes these scores, so that any user of the dataset can easily access the usefulness and limitations of any crop and country data. <img src="images/figure1.png" class="img-fluid" width="585"></p>
+<p>We assigned data quality scores to crop groups within each country across three dimensions: spatial (administrative level reached), temporal (updating periodicity of data) and taxonomic (number of unique crops reported for a crop group). The image below summarizes these scores, so that any user of the dataset can easily access the usefulness and limitations of any crop and country data.</p>
+<p><img src="images/figure1.png" class="img-fluid" width="585"></p>
 </section>
 <script>
 document.addEventListener("DOMContentLoaded", () => {
@@ -260,9 +269,9 @@ document.addEventListener("DOMContentLoaded", () => {
 </main> <!-- /main -->
 <footer style="text-align:center; padding:1.5rem 0; display:flex; justify-content:center; align-items:center; gap:2rem;">
 
-  <img src="images/logo_uah.png" height="60" alt="logo UAH">
+  <img src="images/logo_uah.png" height="40" alt="logo UAH">
 
-  <img src="images/logo_glocee.avif" height="60" alt="logo GLOCEE">
+  <img src="images/logo_glocee.avif" height="40" alt="logo GLOCEE">
 
 </footer>
 <script id="quarto-html-after-body" type="application/javascript">
