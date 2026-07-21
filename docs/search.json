@@ -1,5 +1,12 @@
 [
   {
+    "objectID": "visualizer.html",
+    "href": "visualizer.html",
+    "title": "Visualizer",
+    "section": "",
+    "text": "Select a crop:\n\n\n\n\n\n\n\n\n\n\nSelect a crop to visualize its map.\n\n\nNo map was found for that crop."
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "CROPMED",
@@ -7,59 +14,11 @@
     "text": "CropMED is an open dataset including areas of 191 crops (in hectares) that have been compiled and harmonized from official institutions of 48 countries in the region.\n\n\n\n\nMain dataset: CropMED is primarily available as a table in comma-separated values (.csv) format, including hectares of each crop corresponding to each administrative unit and aggregated into crop groups and subgroups (see Overview).\nGIS extension: CropMED is also available in GeoPackage format (.gpkg, see definition here) for intended usage in GIS programs.\nPictures: CropMED also provides multiple images showing the distribution of hectares for each crop included in the dataset. These maps can be easily visualized in the visualizer.qmd page.\n\n\n\n\nPlease give credit to the authors by referring to the data deposit at Zenodo as follows:   \n\nSan Segundo Molina, D., Villén Pérez, S. & Morales Castilla, I. 2026. A harmonized fine-scale crop area dataset across administrations in Europe, the Mediterranean and the Levant. Zenodo https://doi.org/10.5281/zenodo.2071710\n\n\n\n\n\n\n\n\n\nNote\n\n\n\nThe dataset and the metadata are described from a scientific perspective in a manuscript currently under submission and review. This page will be updated to include the scientific citation as follows:\nSan-Segundo Molina, D., Villén-Pérez, S. & Morales-Castilla, I., 2026. CropMED: A harmonized, fine-scale crop area dataset across administrations in Europe, the Mediterranean Basin and the Levant. Journal Information To Be Completed After Publication."
   },
   {
-    "objectID": "part_1_prep.html",
-    "href": "part_1_prep.html",
-    "title": "Preparation",
+    "objectID": "DataS1/AnnexSup/CropMED_masking_ecoregions/blanking_ecoregions_sf_wgs84_edited.html",
+    "href": "DataS1/AnnexSup/CropMED_masking_ecoregions/blanking_ecoregions_sf_wgs84_edited.html",
+    "title": "CROPMED",
     "section": "",
-    "text": "Page without code\n\n\n\nThis page contains an example for some structured preparation information for a workshop. No code is executed here.\nHere are some preparation information for the participants.",
-    "crumbs": [
-      "Home",
-      "Preparation"
-    ]
-  },
-  {
-    "objectID": "part_1_prep.html#software",
-    "href": "part_1_prep.html#software",
-    "title": "Preparation",
-    "section": "Software",
-    "text": "Software\nIn this workshop we will be using R. You can either\n\nhave R and Rstudio installed on your laptop\nor, use Posit cloud (formerly Rstudio Cloud).\n\nPosit cloud is free of charge for personal users, yet you need to sign up for a new user account and have internet connection.\nThe R package we are using is glmnet.",
-    "crumbs": [
-      "Home",
-      "Preparation"
-    ]
-  },
-  {
-    "objectID": "part_1_prep.html#data",
-    "href": "part_1_prep.html#data",
-    "title": "Preparation",
-    "section": "Data",
-    "text": "Data\nThe datasets we use can be found here (insert link).",
-    "crumbs": [
-      "Home",
-      "Preparation"
-    ]
-  },
-  {
-    "objectID": "part_1_prep.html#code",
-    "href": "part_1_prep.html#code",
-    "title": "Preparation",
-    "section": "Code",
-    "text": "Code\nThe R scripts used in part 1 and part 2 can be found here (insert link).",
-    "crumbs": [
-      "Home",
-      "Preparation"
-    ]
-  },
-  {
-    "objectID": "part_1_prep.html#resources",
-    "href": "part_1_prep.html#resources",
-    "title": "Preparation",
-    "section": "Resources",
-    "text": "Resources\nLecture notes (insert link)\nLab notes (insert link)",
-    "crumbs": [
-      "Home",
-      "Preparation"
-    ]
+    "text": "&lt;!DOCTYPE qgis PUBLIC ‘http://mrcc.com/qgis.dtd’ ‘SYSTEM’&gt;     dataset\n\n\n                GEOGCRS[“WGS 84”,ENSEMBLE[“World Geodetic System 1984 ensemble”,MEMBER[“World Geodetic System 1984 (Transit)”],MEMBER[“World Geodetic System 1984 (G730)”],MEMBER[“World Geodetic System 1984 (G873)”],MEMBER[“World Geodetic System 1984 (G1150)”],MEMBER[“World Geodetic System 1984 (G1674)”],MEMBER[“World Geodetic System 1984 (G1762)”],MEMBER[“World Geodetic System 1984 (G2139)”],MEMBER[“World Geodetic System 1984 (G2296)”],ELLIPSOID[“WGS 84”,6378137,298.257223563,LENGTHUNIT[“metre”,1]],ENSEMBLEACCURACY[2.0]],PRIMEM[“Greenwich”,0,ANGLEUNIT[“degree”,0.0174532925199433]],CS[ellipsoidal,2],AXIS[“geodetic latitude (Lat)”,north,ORDER[1],ANGLEUNIT[“degree”,0.0174532925199433]],AXIS[“geodetic longitude (Lon)”,east,ORDER[2],ANGLEUNIT[“degree”,0.0174532925199433]],USAGE[SCOPE[“Horizontal component of 3D system.”],AREA[“World.”],BBOX[-90,-180,90,180]],ID[“EPSG”,4326]] +proj=longlat +datum=WGS84 +no_defs 3452 4326 EPSG:4326 WGS 84 longlat EPSG:7030 true"
   },
   {
     "objectID": "about.html",
@@ -67,83 +26,6 @@
     "title": "About",
     "section": "",
     "text": "If you have any question about the data, please send an email to dario.san@uah.es or open an Issue in the GitHub repository."
-  },
-  {
-    "objectID": "part_2_eda.html",
-    "href": "part_2_eda.html",
-    "title": "Part I",
-    "section": "",
-    "text": "Page with R code\n\n\n\nThis page contains an example template for a lab session, where R code and results are displayed here.\nYou can find more information on how to include code in Quarto website here.\nYou can experiment with code-fold and code-tools in the yaml header above to change how the code cells look like."
-  },
-  {
-    "objectID": "part_2_eda.html#a-cancer-modeling-example",
-    "href": "part_2_eda.html#a-cancer-modeling-example",
-    "title": "Part I",
-    "section": "A Cancer Modeling Example",
-    "text": "A Cancer Modeling Example\nExercise on analysis of miRNA, mRNA and protein data from the paper Aure et al, Integrated analysis reveals microRNA networks coordinately expressed with key proteins in breast cancer, Genome Medicine, 2015.\nPlease run the code provided to replicate some of the analyses. Make sure you can explain what all the analysis steps do and that you understand all the results.\nIn addition, there are some extra tasks (Task 1), where no R code is provided. Please do these tasks when you have time available at the end of the lab.\n\nLoad the data\nRead the data, and convert to matrix format.\n\nmrna &lt;- read.table(\"data/data_example.txt\", header=T, sep=\"\\t\", dec=\".\")\n\n# Convert to matrix format\n\nmrna &lt;- as.matrix(mrna)\n\nPrint the data\n\nmrna[1:4, 1:4]\n\n      OSL2R.3002T4 OSL2R.3005T1 OSL2R.3013T1 OSL2R.3030T2\nACACA      1.60034     -0.49087     -0.26553     -0.27857\nANXA1     -2.42501     -0.05416     -0.46478     -2.18393\nAR         0.39615     -0.43348     -0.10232      0.58299\nBAK1       0.78627      0.39897      0.22598     -1.31202\n\n\nVisualise the overall distribution of expression levels by histogram\n\nhist(mrna, nclass=40, xlim=c(-5,5), col=\"lightblue\")\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTask 1\n\n\n\nThis is a callout-note, and it can be quite useful for exercises. You can find more about callout here.\nExample: Extend the above analysis to cover all genes."
-  },
-  {
-    "objectID": "index.html#publicaciones",
-    "href": "index.html#publicaciones",
-    "title": "CropMED: A harmonized fine-scale crop area dataset across administrations in Europe, the Mediterranean and the Levant",
-    "section": "Publicaciones",
-    "text": "Publicaciones\nAquí va tu contenido normal…"
-  },
-  {
-    "objectID": "index.html#sobre-mí",
-    "href": "index.html#sobre-mí",
-    "title": "CropMED: A harmonized fine-scale crop area dataset across administrations in Europe, the Mediterranean and the Levant",
-    "section": "Sobre mí",
-    "text": "Sobre mí"
-  },
-  {
-    "objectID": "index.html#más-contenido",
-    "href": "index.html#más-contenido",
-    "title": "CropMED: A harmonized fine-scale crop area dataset across administrations in Europe, the Mediterranean and the Levant",
-    "section": "Más contenido…",
-    "text": "Más contenido…\nJuly 2026"
-  },
-  {
-    "objectID": "index.html#cropmed",
-    "href": "index.html#cropmed",
-    "title": "CROPMED",
-    "section": "",
-    "text": "A harmonized, fine-scale crop area dataset across administrations in Europe, the Mediterranean, and the Levant"
-  },
-  {
-    "objectID": "download.html",
-    "href": "download.html",
-    "title": "Download files",
-    "section": "",
-    "text": "Recommendation\n\n\n\nBy default, we suggest downloading the .csv file. If the user aims to use CropMED for spatial analysis under GIS workflows, we suggest downloading the .gpkg version"
-  },
-  {
-    "objectID": "download.html#main-dataset",
-    "href": "download.html#main-dataset",
-    "title": "download",
-    "section": "Main dataset",
-    "text": "Main dataset\n\nDownload the main dataset (in .csv) (7.2 MB)\nDownload the geographic dataset (in .gpkg) (642.5MB)"
-  },
-  {
-    "objectID": "download.html#download-links",
-    "href": "download.html#download-links",
-    "title": "Download files",
-    "section": "Download links",
-    "text": "Download links\n\nDownload the main dataset (Comma-Separated Values file) (7.2 MB)\nDownload the geographic dataset (GeoPackage file) (642.5MB)"
-  },
-  {
-    "objectID": "overview.html",
-    "href": "overview.html",
-    "title": "CropMED main features",
-    "section": "",
-    "text": "191\nUnique crops\n\n\n1,709\nAdministrative Units\n\n\n92%\nof admin. units at third administrative level (provinces, governorates, prefectures, NUTS3, etc).\n\n\n48\nCountries reporting official statistics\n\n\n2023\nMost frequent year reporting crop areas\n\n\n94%\nCorrelation with FAO data on crop hectares for 47 countries included in CropMED\n\n\n\nCrop hectares distribution\nIn the following graph, the rectangle area shows the proportion of area occupied by each crop relative to the total cropped hectares included in CropMED. \n\n\nData validation\nOverall, we found high correlation (\\(R^2 = 0.094,\\ \\textrm{NRMSE}=0.0015\\)) between data from CropMED administrative units aggregated at the country-level and those reported from FAOSTAT (https://www.fao.org/faostat/en/#data/QCL). Here we show the validation for some of the most relevant crops included in CropMED, where countries with higher divergences are pointed out. \n\n\nData Quality Indicators\nWe assigned data quality scores to crop groups within each country across three dimensions: spatial (administrative level reached), temporal (updating periodicity of data) and taxonomic (number of unique crops reported for a crop group). The image below summarizes these scores, so that any user of the dataset can easily access the usefulness and limitations of any crop and country data."
-  },
-  {
-    "objectID": "visualizer.html",
-    "href": "visualizer.html",
-    "title": "Visualizer",
-    "section": "",
-    "text": "Select a crop:\n\n\n\n\n\n\n\n\n\n\nSelect a crop to visualize its map.\n\n\nNo map was found for that crop."
   },
   {
     "objectID": "about.html#contact",
@@ -165,5 +47,26 @@
     "title": "About",
     "section": "Data sources",
     "text": "Data sources\nThe data descriptor article (now under submission in a scientific journal) properly cites all data sources used to compile CropMED.\n\n\n\n\n\n\nScientific Article describing the dataset:\n\n\n\nSan-Segundo Molina, D., Villén-Pérez, S. & Morales-Castilla, I., 2026. CropMED: A harmonized, fine-scale crop area dataset across administrations in Europe, the Mediterranean Basin and the Levant. Journal Information To Be Completed After Publication."
+  },
+  {
+    "objectID": "download.html",
+    "href": "download.html",
+    "title": "Download files",
+    "section": "",
+    "text": "Recommendation\n\n\n\nBy default, we suggest downloading the .csv file. If the user aims to use CropMED for spatial analysis under GIS workflows, we suggest downloading the .gpkg version"
+  },
+  {
+    "objectID": "download.html#download-links",
+    "href": "download.html#download-links",
+    "title": "Download files",
+    "section": "Download links",
+    "text": "Download links\n\nDownload the main dataset (Comma-Separated Values file) (7.2 MB)\nDownload the geographic dataset (GeoPackage file) (642.5MB)"
+  },
+  {
+    "objectID": "overview.html",
+    "href": "overview.html",
+    "title": "CropMED main features",
+    "section": "",
+    "text": "191\nUnique crops\n\n\n1,709\nAdministrative Units\n\n\n92%\nof admin. units at third administrative level (provinces, governorates, prefectures, NUTS3, etc).\n\n\n48\nCountries reporting official statistics\n\n\n2023\nMost frequent year reporting crop areas\n\n\n94%\nCorrelation with FAO data on crop hectares for 47 countries included in CropMED\n\n\n\nCrop hectares distribution\nIn the following graph, the rectangle area shows the proportion of area occupied by each crop relative to the total cropped hectares included in CropMED. \n\n\nData validation\nOverall, we found high correlation (\\(R^2 = 0.094,\\ \\textrm{NRMSE}=0.0015\\)) between data from CropMED administrative units aggregated at the country-level and those reported from FAOSTAT (https://www.fao.org/faostat/en/#data/QCL). Here we show the validation for some of the most relevant crops included in CropMED, where countries with higher divergences are pointed out. \n\n\nData Quality Indicators\nWe assigned data quality scores to crop groups within each country across three dimensions: spatial (administrative level reached), temporal (updating periodicity of data) and taxonomic (number of unique crops reported for a crop group). The image below summarizes these scores, so that any user of the dataset can easily access the usefulness and limitations of any crop and country data."
   }
 ]

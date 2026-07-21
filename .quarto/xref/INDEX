@@ -19,5 +19,8 @@
   },
   "download.qmd": {
     "download.html": "ed827903"
+  },
+  "DataS1/AnnexSup/CropMED_masking_ecoregions/blanking_ecoregions_sf_wgs84_edited.qmd": {
+    "blanking_ecoregions_sf_wgs84_edited.html": "881b9b52"
   }
 }
