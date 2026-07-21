@@ -22,5 +22,8 @@
   },
   "DataS1/AnnexSup/CropMED_masking_ecoregions/blanking_ecoregions_sf_wgs84_edited.qmd": {
     "blanking_ecoregions_sf_wgs84_edited.html": "881b9b52"
+  },
+  "DataS1/CropMED_masking_ecoregions/blanking_ecoregions_sf_wgs84_edited.qmd": {
+    "blanking_ecoregions_sf_wgs84_edited.html": "2227c362"
   }
 }
