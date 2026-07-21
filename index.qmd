@@ -7,8 +7,7 @@ body-class: home-page
 
 :::::: home-page
 :::: hero
-![](images/logo_uah_white.png){height=70px, .hero-logo}
-
+![](images/logo_uah_white.png){.hero-logo height="70px,"}
 
 ::: hero-content
 ## CropMED: A harmonized, fine-scale crop area dataset across administrations in Europe, the Mediterranean, and the Levant
@@ -41,3 +40,21 @@ The dataset and the metadata are described from a scientific perspective in a ma
 | **San-Segundo Molina, D., Villén-Pérez, S. & Morales-Castilla, I., 2026**. CropMED: A harmonized, fine-scale crop area dataset across administrations in Europe, the Mediterranean Basin and the Levant. *Journal Information To Be Completed After Publication*.
 :::
 ::::::
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const navbar = document.querySelector(".navbar");
+  const hero = document.querySelector(".hero");
+  if (!navbar || !hero) return;
+
+  const heroHeight = hero.offsetHeight;
+
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > heroHeight - 80) {
+      navbar.classList.add("scrolled");
+    } else {
+      navbar.classList.remove("scrolled");
+    }
+  });
+});
+</script>
