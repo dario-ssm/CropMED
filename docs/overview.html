@@ -131,6 +131,10 @@ window.Quarto = {
 <span class="menu-text">Visualize data</span></a>
   </li>  
   <li class="nav-item">
+    <a class="nav-link" href="./qualityIndicators.html"> 
+<span class="menu-text">Data Quality Indicators</span></a>
+  </li>  
+  <li class="nav-item">
     <a class="nav-link" href="./download.html"> 
 <span class="menu-text">Download</span></a>
   </li>  
@@ -168,7 +172,6 @@ window.Quarto = {
   <li><a href="#crop-species-richness-distribution" id="toc-crop-species-richness-distribution" class="nav-link active" data-scroll-target="#crop-species-richness-distribution">Crop species richness distribution</a></li>
   <li><a href="#crop-hectares-distribution" id="toc-crop-hectares-distribution" class="nav-link" data-scroll-target="#crop-hectares-distribution">Crop hectares distribution</a></li>
   <li><a href="#data-validation" id="toc-data-validation" class="nav-link" data-scroll-target="#data-validation">Data validation</a></li>
-  <li><a href="#data-quality-indicators" id="toc-data-quality-indicators" class="nav-link" data-scroll-target="#data-quality-indicators">Data Quality Indicators</a></li>
   </ul>
 </nav>
     </div>
@@ -196,7 +199,7 @@ window.Quarto = {
 
 <div class="stats-grid">
 <section id="section" class="level3 stat-box">
-<h3 class="anchored" data-anchor-id="section">191</h3>
+<h3 class="anchored" data-anchor-id="section">140</h3>
 <p>Unique crops</p>
 </section>
 <section id="section-1" class="level3 stat-box">
@@ -208,7 +211,7 @@ window.Quarto = {
 <p>of admin. units at third administrative level (provinces, governorates, prefectures, NUTS3, etc).</p>
 </section>
 <section id="section-3" class="level3 stat-box">
-<h3 class="anchored" data-anchor-id="section-3">48</h3>
+<h3 class="anchored" data-anchor-id="section-3">47</h3>
 <p>Countries reporting official statistics</p>
 </section>
 <section id="section-4" class="level3 stat-box">
@@ -235,34 +238,6 @@ window.Quarto = {
 <p>Overall, we found high correlation (<span class="math inline">\(R^2 = 0.094,\ \textrm{NRMSE}=0.0015\)</span>) between data from CropMED administrative units aggregated at the country-level and those reported from FAOSTAT (<a href="https://www.fao.org/faostat/en/#data/QCL" class="uri">https://www.fao.org/faostat/en/#data/QCL</a>). Here we show the validation for some of the most relevant crops included in <em>CropMED,</em> where countries with higher divergences are pointed out.</p>
 <p><img src="images/technical_validation_top16.png" class="img-fluid"></p>
 </section>
-<section id="data-quality-indicators" class="level1 section-block">
-<h1>Data Quality Indicators</h1>
-<p>We assigned data quality scores to crop groups within each country across three dimensions: spatial (administrative level reached), temporal (updating periodicity of data) and taxonomic (number of unique crops reported for a crop group). The image below summarizes these scores, so that any user of the dataset can easily access the usefulness and limitations of any crop and country data.</p>
-<p><img src="images/figure1.png" class="img-fluid" width="585"></p>
-</section>
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-  const statsGrid = document.querySelector(".stats-grid");
-  const sections = document.querySelectorAll(".section-block");
-  const statBoxes = document.querySelectorAll(".stat-box");
-
-  const blocks = [statsGrid, ...sections].filter(Boolean);
-  blocks.forEach(el => el.classList.add("reveal"));
-
-  statBoxes.forEach((el, i) => el.style.setProperty("--i", i));
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("visible");
-        observer.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.15 });
-
-  blocks.forEach(el => observer.observe(el));
-});
-</script>
 
 
 
@@ -346,7 +321,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp("https:\/\/dario-ssm\.github\.io\/CropMED\/");
+        var filterRegex = new RegExp('/' + window.location.host + '/');
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }

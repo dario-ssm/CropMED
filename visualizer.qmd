@@ -12,7 +12,7 @@ resources:
 
 crops <- read.csv("data/crop_list.csv", header = FALSE)$V1
 crops <- sort(trimws(as.character(crops)))
-
+crops <- stringr::str_to_sentence(crops)
 cat('<div class="crop-selector">\n')
 cat('<label for="crop-input">Select a crop:</label>\n')
 cat('<div class="combobox">\n')
@@ -31,13 +31,10 @@ cat('</script>\n')
 
 <p id="crop-placeholder">
 
-Select a crop to visualize its map.
-
 </p>
 
 <p id="crop-error" style="display:none; color:#b00;">
 
-No map was found for that crop.
 
 </p>
 :::

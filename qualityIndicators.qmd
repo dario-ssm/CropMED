@@ -1,0 +1,171 @@
+---
+title: "Data Quality Indicators"
+format: html
+css: qualityIndicators.css
+resources:
+  - images/
+---
+
+We assigned data quality scores to crop groups within each country across three dimensions: spatial (administrative level reached), temporal (updating periodicity of data) and taxonomic (number of unique crops reported for a crop group).
+
+
+```{r}
+#| echo: false
+#| results: asis
+countries_df <- read.csv("data/countries.csv", sep = ";", header = TRUE)
+
+cat('<div class="country-selector">\n')
+cat('<label for="country-input">Select a country:</label>\n')
+cat('<div class="combobox">\n')
+cat('<input type="text" id="country-input" placeholder="Write or click to see all options..." autocomplete="off">\n')
+cat('<ul id="country-dropdown" class="country-dropdown"></ul>\n')
+cat('</div>\n')
+cat('</div>\n')
+
+cat('<script id="country-data" type="application/json">\n')
+json_items <- sprintf('{"name":"%s","code":"%s"}', countries_df$name, countries_df$code)
+cat(sprintf('[%s]\n', paste(json_items, collapse = ",")))
+cat('</script>\n')
+```
+
+::: scores-display
+<img alt="Selected country data quality indicators" id="country-quality" style="display:none;"/>
+
+<p id="country-placeholder">
+
+</p>
+
+<p id="country-error" style="display:none; color:#b00;">
+
+
+</p>
+:::
+
+```{=html}
+<script>
+const allCountries = JSON.parse(document.getElementById('country-data').textContent);
+const input = document.getElementById('country-input');
+const dropdown = document.getElementById('country-dropdown');
+const img = document.getElementById('country-quality');
+const placeholder = document.getElementById('country-placeholder');
+const errorMsg = document.getElementById('country-error');
+let highlightedIndex = -1;
+let currentOptions = [];
+let selectedCode = null; // guardamos el code del país seleccionado
+
+function renderDropdown(options) {
+  currentOptions = options;
+  highlightedIndex = -1;
+  dropdown.innerHTML = '';
+  if (options.length === 0) {
+    dropdown.style.display = 'none';
+    return;
+  }
+  options.forEach((country, i) => {
+    const li = document.createElement('li');
+    li.textContent = country.name;
+    li.dataset.index = i;
+    li.addEventListener('click', () => {
+      input.value = country.name;
+      selectedCode = country.code;
+      closeDropdown();
+      searchCountry();
+    });
+    dropdown.appendChild(li);
+  });
+  dropdown.style.display = 'block';
+}
+
+function openFullList() {
+  renderDropdown(allCountries);
+}
+
+function filterList(text) {
+  const term = text.trim().toLowerCase();
+  if (term === '') {
+    openFullList();
+    return;
+  }
+  const filtered = allCountries.filter(c => c.name.toLowerCase().includes(term));
+  renderDropdown(filtered);
+}
+
+function closeDropdown() {
+  dropdown.style.display = 'none';
+  highlightedIndex = -1;
+}
+
+function updateHighlight() {
+  const items = dropdown.querySelectorAll('li');
+  items.forEach((li, i) => {
+    li.classList.toggle('highlighted', i === highlightedIndex);
+  });
+  if (highlightedIndex >= 0 && items[highlightedIndex]) {
+    items[highlightedIndex].scrollIntoView({ block: 'nearest' });
+  }
+}
+
+input.addEventListener('click', () => {
+  openFullList();
+});
+input.addEventListener('input', () => {
+  selectedCode = null; // si escribe manualmente, invalidamos la selección previa
+  filterList(input.value);
+});
+input.addEventListener('keydown', (e) => {
+  const items = dropdown.querySelectorAll('li');
+  if (e.key === 'ArrowDown') {
+    e.preventDefault();
+    highlightedIndex = Math.min(highlightedIndex + 1, items.length - 1);
+    updateHighlight();
+  } else if (e.key === 'ArrowUp') {
+    e.preventDefault();
+    highlightedIndex = Math.max(highlightedIndex - 1, 0);
+    updateHighlight();
+  } else if (e.key === 'Enter') {
+    e.preventDefault();
+    if (highlightedIndex >= 0 && currentOptions[highlightedIndex]) {
+      const chosen = currentOptions[highlightedIndex];
+      input.value = chosen.name;
+      selectedCode = chosen.code;
+      closeDropdown();
+    }
+    searchCountry();
+  } else if (e.key === 'Escape') {
+    closeDropdown();
+  }
+});
+document.addEventListener('click', (e) => {
+  if (!e.target.closest('.combobox')) {
+    closeDropdown();
+  }
+});
+
+function searchCountry() {
+  closeDropdown();
+
+  // Si no hay code guardado (usuario escribió texto libre), buscamos coincidencia exacta por nombre
+  if (!selectedCode) {
+    const match = allCountries.find(c => c.name.toLowerCase() === input.value.trim().toLowerCase());
+    selectedCode = match ? match.code : null;
+  }
+
+  if (selectedCode) {
+    placeholder.style.display = 'none';
+    errorMsg.style.display = 'none';
+    img.style.display = 'block';
+    img.src = `images/${selectedCode}.png`;
+    img.alt = `Country data quality scores: ${input.value}`;
+  } else {
+    img.style.display = 'none';
+    placeholder.style.display = 'none';
+    errorMsg.style.display = 'block';
+  }
+}
+</script>
+```
+
+
+The image below summarizes these scores, so that any user of the dataset can easily access the usefulness and limitations of any crop and country data. 
+
+![](images/figure1.png){width="585"}

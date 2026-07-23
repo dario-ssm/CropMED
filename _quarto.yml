@@ -12,6 +12,8 @@ website:
         text: Overview
       - href: visualizer.qmd
         text: Visualize data
+      - href: qualityIndicators.qmd
+        text: Data Quality Indicators        
       - href: download.qmd
         text: Download
       - href: about.qmd
