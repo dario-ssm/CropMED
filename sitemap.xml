@@ -2,22 +2,26 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://dario-ssm.github.io/CropMED/visualizer.html</loc>
-    <lastmod>2026-07-21T18:08:13.429Z</lastmod>
+    <lastmod>2026-07-23T07:27:29.685Z</lastmod>
   </url>
   <url>
-    <loc>https://dario-ssm.github.io/CropMED/index.html</loc>
-    <lastmod>2026-07-21T12:43:34.711Z</lastmod>
-  </url>
-  <url>
-    <loc>https://dario-ssm.github.io/CropMED/about.html</loc>
-    <lastmod>2026-07-21T11:57:54.900Z</lastmod>
+    <loc>https://dario-ssm.github.io/CropMED/overview.html</loc>
+    <lastmod>2026-07-23T11:18:25.072Z</lastmod>
   </url>
   <url>
     <loc>https://dario-ssm.github.io/CropMED/download.html</loc>
     <lastmod>2026-07-21T11:57:55.917Z</lastmod>
   </url>
   <url>
-    <loc>https://dario-ssm.github.io/CropMED/overview.html</loc>
-    <lastmod>2026-07-21T17:41:22.658Z</lastmod>
+    <loc>https://dario-ssm.github.io/CropMED/about.html</loc>
+    <lastmod>2026-07-21T11:57:54.900Z</lastmod>
+  </url>
+  <url>
+    <loc>https://dario-ssm.github.io/CropMED/index.html</loc>
+    <lastmod>2026-07-21T12:43:34.711Z</lastmod>
+  </url>
+  <url>
+    <loc>https://dario-ssm.github.io/CropMED/qualityIndicators.html</loc>
+    <lastmod>2026-07-23T11:11:58.009Z</lastmod>
   </url>
 </urlset>
