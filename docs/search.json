@@ -7,11 +7,25 @@
     "text": "Select a crop:"
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "CROPMED",
+    "objectID": "overview.html",
+    "href": "overview.html",
+    "title": "CropMED main features",
     "section": "",
-    "text": "CropMED is an open dataset including areas of 191 crops (in hectares) that have been compiled and harmonized from official institutions of 48 countries in the region.\n\n\n\n\nMain dataset: CropMED is primarily available as a table in comma-separated values (.csv) format, including hectares of each crop corresponding to each administrative unit and aggregated into crop groups and subgroups (see Overview).\nGIS extension: CropMED is also available in GeoPackage format (.gpkg, see definition here) for intended usage in GIS programs.\nPictures: CropMED also provides multiple images showing the distribution of hectares for each crop included in the dataset. These maps can be easily visualized in the visualizer.qmd page.\n\n\n\n\nPlease give credit to the authors by referring to the data deposit at Zenodo as follows:   \n\nSan Segundo Molina, D., Villén Pérez, S. & Morales Castilla, I. 2026. A harmonized fine-scale crop area dataset across administrations in Europe, the Mediterranean and the Levant. Zenodo https://doi.org/10.5281/zenodo.2071710\n\n\n\n\n\n\n\n\n\nNote\n\n\n\nThe dataset and the metadata are described from a scientific perspective in a manuscript currently under submission and review. This page will be updated to include the scientific citation as follows:\nSan-Segundo Molina, D., Villén-Pérez, S. & Morales-Castilla, I., 2026. CropMED: A harmonized, fine-scale crop area dataset across administrations in Europe, the Mediterranean Basin and the Levant. Journal Information To Be Completed After Publication."
+    "text": "141\nUnique crops\n\n\n1,709\nAdministrative Units\n\n\n92%\nof admin. units at third administrative level (provinces, governorates, prefectures, NUTS3, etc).\n\n\n47\nCountries reporting official statistics\n\n\n2023\nMost frequent year reporting crop areas\n\n\n94%\nCorrelation with FAO data on crop hectares for 47 countries included in CropMED\n\n\n\nCrop species richness distribution\nThe following map shows the number of crops with at least one hectare reported at each administrative unit.\n\n\n\nCrop hectares distribution\nIn the following graph, the rectangle area shows the proportion of area occupied by each crop relative to the total cropped hectares included in CropMED.\n\n\n\nData validation\nOverall, we found high correlation (\\(R^2 = 0.094,\\ \\textrm{NRMSE}=0.0015\\)) between data from CropMED administrative units aggregated at the country-level and those reported from FAOSTAT (https://www.fao.org/faostat/en/#data/QCL). Here we show the validation for some of the most relevant crops included in CropMED, where countries with higher divergences are pointed out."
+  },
+  {
+    "objectID": "download.html",
+    "href": "download.html",
+    "title": "Download files",
+    "section": "",
+    "text": "Recommendation\n\n\n\nBy default, we suggest downloading the .csv file. If the user aims to use CropMED for spatial analysis under GIS workflows, we suggest downloading the .gpkg version"
+  },
+  {
+    "objectID": "download.html#download-links",
+    "href": "download.html#download-links",
+    "title": "Download files",
+    "section": "Download links",
+    "text": "Download links\n\nDownload the main dataset (Comma-Separated Values file) (7.2 MB)\nDownload the geographic dataset (GeoPackage file) (642.5MB)"
   },
   {
     "objectID": "about.html",
@@ -42,25 +56,11 @@
     "text": "Data sources\nThe data descriptor article (now under submission in a scientific journal) properly cites all data sources used to compile CropMED.\n\n\n\n\n\n\nScientific Article describing the dataset:\n\n\n\nSan-Segundo Molina, D., Villén-Pérez, S. & Morales-Castilla, I., 2026. CropMED: A harmonized, fine-scale crop area dataset across administrations in Europe, the Mediterranean Basin and the Levant. Journal Information To Be Completed After Publication."
   },
   {
-    "objectID": "download.html",
-    "href": "download.html",
-    "title": "Download files",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "CROPMED",
     "section": "",
-    "text": "Recommendation\n\n\n\nBy default, we suggest downloading the .csv file. If the user aims to use CropMED for spatial analysis under GIS workflows, we suggest downloading the .gpkg version"
-  },
-  {
-    "objectID": "download.html#download-links",
-    "href": "download.html#download-links",
-    "title": "Download files",
-    "section": "Download links",
-    "text": "Download links\n\nDownload the main dataset (Comma-Separated Values file) (7.2 MB)\nDownload the geographic dataset (GeoPackage file) (642.5MB)"
-  },
-  {
-    "objectID": "overview.html",
-    "href": "overview.html",
-    "title": "CropMED main features",
-    "section": "",
-    "text": "140\nUnique crops\n\n\n1,709\nAdministrative Units\n\n\n92%\nof admin. units at third administrative level (provinces, governorates, prefectures, NUTS3, etc).\n\n\n47\nCountries reporting official statistics\n\n\n2023\nMost frequent year reporting crop areas\n\n\n94%\nCorrelation with FAO data on crop hectares for 47 countries included in CropMED\n\n\n\nCrop species richness distribution\nThe following map shows the number of crops with at least one hectare reported at each administrative unit.\n\n\n\nCrop hectares distribution\nIn the following graph, the rectangle area shows the proportion of area occupied by each crop relative to the total cropped hectares included in CropMED.\n\n\n\nData validation\nOverall, we found high correlation (\\(R^2 = 0.094,\\ \\textrm{NRMSE}=0.0015\\)) between data from CropMED administrative units aggregated at the country-level and those reported from FAOSTAT (https://www.fao.org/faostat/en/#data/QCL). Here we show the validation for some of the most relevant crops included in CropMED, where countries with higher divergences are pointed out."
+    "text": "CropMED is an open dataset including areas of 191 crops (in hectares) that have been compiled and harmonized from official institutions of 48 countries in the region.\n\n\n\n\nMain dataset: CropMED is primarily available as a table in comma-separated values (.csv) format, including hectares of each crop corresponding to each administrative unit and aggregated into crop groups and subgroups (see Overview).\nGIS extension: CropMED is also available in GeoPackage format (.gpkg, see definition here) for intended usage in GIS programs.\nPictures: CropMED also provides multiple images showing the distribution of hectares for each crop included in the dataset. These maps can be easily visualized in the visualizer.qmd page.\n\n\n\n\nPlease give credit to the authors by referring to the data deposit at Zenodo as follows:   \n\nSan Segundo Molina, D., Villén Pérez, S. & Morales Castilla, I. 2026. A harmonized fine-scale crop area dataset across administrations in Europe, the Mediterranean and the Levant. Zenodo https://doi.org/10.5281/zenodo.2071710\n\n\n\n\n\n\n\n\n\nNote\n\n\n\nThe dataset and the metadata are described from a scientific perspective in a manuscript currently under submission and review. This page will be updated to include the scientific citation as follows:\nSan-Segundo Molina, D., Villén-Pérez, S. & Morales-Castilla, I., 2026. CropMED: A harmonized, fine-scale crop area dataset across administrations in Europe, the Mediterranean Basin and the Levant. Journal Information To Be Completed After Publication."
   },
   {
     "objectID": "qualityIndicators.html",
