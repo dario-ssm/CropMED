@@ -12,7 +12,13 @@ Unique crops
 :::
 
 ::: stat-box
-### 1,709
+### 214
+
+Crops including varieties and cultivars
+:::
+
+::: stat-box
+### 1,705
 
 Administrative Units
 :::

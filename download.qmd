@@ -11,6 +11,6 @@ By default, we suggest downloading the *.csv* file. If the user aims to use *Cro
 
 ## Download links
 
-- [Download the main dataset (*Comma-Separated Values* file)](https://zenodo.org/records/20717354/files/CropMED_dataset.csv?download=1) (7.2 MB)
+- [Download the main dataset (*Comma-Separated Values* file)](https://zenodo.org/records/21672597/files/CropMED_dataset.csv?download=1) (7.2 MB)
 
-- [Download the geographic dataset (*GeoPackage* file)](https://zenodo.org/records/20717354/files/CropMED_dataset_geoms.gpkg?download=1) (642.5MB)
+- [Download the geographic dataset (*GeoPackage* file)](https://zenodo.org/records/21672597/files/CropMED_dataset_geoms.gpkg?download=1) (642.5MB)

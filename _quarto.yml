@@ -22,7 +22,7 @@ website:
       - icon: github
         href: https://github.com/dario-ssm/CropMED
       - text: '<img src="icons/zenodo-white.svg" width="112" height="16" alt="Zenodo" style="vertical-align: middle;">'
-        href: https://zenodo.org/records/20717102
+        href: https://doi.org/10.5281/zenodo.21672597
   page-navigation: true
 format:
   html:
